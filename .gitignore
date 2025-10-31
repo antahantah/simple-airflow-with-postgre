@@ -1,0 +1,11 @@
+# Airflow log directory
+logs/
+
+# Specific Airflow log files (if they are generated outside the 'logs' directory)
+airflow-*.log
+airflow-*.err
+airflow-*.out
+
+
+__pycache__/                      
+*.pyc  
