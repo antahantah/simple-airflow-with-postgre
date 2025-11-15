@@ -50,7 +50,7 @@ For Dummy Datasets can be accessed [here](https://docs.google.com/spreadsheets/d
 
 ---
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 
@@ -93,5 +93,71 @@ For Dummy Datasets can be accessed [here](https://docs.google.com/spreadsheets/d
    - BigQuery: Add GCP credentials path
 
 7. **Enable and trigger DAGs**
+
+---
+
+
+## 📂 Project Structure
+```
+simple-airflow-with-postgre/
+├── docker-compose.yaml        # Docker services configuration
+├── Dockerfile.airflow         # Custom Airflow image
+├── .env                       # Environment variables
+├── .gitignore                 # Git ignore rules
+├── docs/
+│   ├── documentations/           # Project documentation (WIP)
+│   └── diagrams/              # Architecture diagrams (WIP)
+├── airflow/
+│   ├── dags/
+│   │   ├── bash_postgres.py              # DAG 1: Insert to PostgreSQL
+│   │   └── postgres_to_bigquery.py       # DAG 2: ETL to BigQuery
+│   └── logs/                  # Airflow logs (git ignored)
+├── gcp-key.json               # Google Service Account key
+└── README.md                  # **This file**
+```
+
+---
+
+### BigQuery Setup
+
+1. Create service account in GCP
+2. Grant roles:
+   - BigQuery Data Editor
+   - BigQuery Job User
+   - Storage Object Admin
+3. Create and Download JSON key
+4. Place at root: `gcp-key.json` (or copy from your local gcloud application default credentials)
+
+## Documentations (WIP)
+
+See `/docs/documentations/` folder for:
+- Airflow UI with successful DAG runs
+- DBeaver showing PostgreSQL data
+- BigQuery Console showing tables and data
+- Partition verification query results
+
+---
+
+## Video Demonstration
+
+[https://youtu.be/s21dGEkzlgY] - 20-minute walkthrough of the Capstone project
+
+---
+
+## Author
+
+**Aditya Putra Ferza**
+- GitHub: [@antahantah](https://github.com/antahantah)
+- Email: adit.ferza@gmail.com
+This is a capstone project for educational purposes, created as assignment for Purwadhika Data Engineering Bootcamp - Capstone Project 3.
+
+---
+
+## Acknowledgements
+
+- Purwadhika Digital Technology School for the comprehensive curriculum and learning resources
+- The lecturers and cohort peers for their supports and guidances
+
+Special thanks to Google Cloud Platform and everyone who contributed to the open-source libraries used in this project.
 
 ---
