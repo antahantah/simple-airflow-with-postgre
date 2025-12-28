@@ -105,14 +105,14 @@ simple-airflow-with-postgre/
 ├── .env                       # Environment variables
 ├── .gitignore                 # Git ignore rules
 ├── docs/
-│   ├── documentations/           # Project documentation (WIP)
+│   ├── documentations/        # Project documentation (WIP)
 │   └── diagrams/              # Architecture diagrams (WIP)
 ├── airflow/
 │   ├── dags/
-│   │   ├── bash_postgres.py              # DAG 1: Insert to PostgreSQL
-│   │   └── postgres_to_bigquery.py       # DAG 2: ETL to BigQuery
+│   │   ├── my_postgre_dags.py    # DAG 1: Insert to PostgreSQL
+│   │   └── postgres_to_bq.py     # DAG 2: ETL to BigQuery
+│   ├── gcp-key.json           # Google Service Account key
 │   └── logs/                  # Airflow logs (git ignored)
-├── gcp-key.json               # Google Service Account key
 └── README.md                  # **This file**
 ```
 
